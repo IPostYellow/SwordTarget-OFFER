@@ -1,3 +1,4 @@
+'''自己的思路'''
 class Solution:
     def binarysearch(self, target, lists, left, right):
         mid = (left + right) // 2
@@ -19,6 +20,23 @@ class Solution:
                 continue
         return False
 
+'''参考答案思路'''
+class Answer:
+    def Find(selfs, target, array):
+        if array == [[]]:
+            return False
+        row = len(array)
+        col = len(array[0])
+        j = 0
+        i = row - 1
+        while ((i >= 0) and (j < col)):
+            if target == array[i][j]:
+                return True
+            elif (target < array[i][j]):
+                i -= 1
+            elif (target > array[i][j]):
+                j += 1
+        return False
 
 P = Solution()
 target = 15
