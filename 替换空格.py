@@ -8,10 +8,27 @@ class Solution:
         str = "%20"
         return str.join(tmp)
 
-'''进一步的思路,要修改原字符串'''
+'''进一步的思路'''
 class Answer:
     def replaceSpace(self,s):
         return s.replace(" ","%20")
+
+'''用来面试时候的方法,指针方法'''
+class Pointer:
+    def replaceSpace(self, s):
+        if str == "":
+            return ""
+        else:
+            tmp = ""
+            i = 0  # 遍历原字符串的指针
+            # 由于python中string是不可变的。只能不停拼接
+            while (i < len(s)):
+                if s[i] == " ":
+                    tmp += "%20"
+                else:
+                    tmp += s[i]
+                i += 1
+            return tmp
 
 P=Answer()
 print(P.replaceSpace("We Are Happy"))
