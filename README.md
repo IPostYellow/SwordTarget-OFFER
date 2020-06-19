@@ -1,7 +1,7 @@
 # SwordTarget-OFFER
 ## 剑指OFFER的题目
 ### 按难度顺序查看：[简单](#简单)、[中等](#中等)、[较难](#较难)<br>
-### 按分类查看：<br>
+### 按分类查看：[数组](#数组)、[树](#树)、[字符串](#字符串)、[数学](#数学)、[链表](#链表)<br>
 
 ### 简单：<br>
 1.[二叉树的深度](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6.py)<br>
