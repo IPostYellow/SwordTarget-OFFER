@@ -1,7 +1,7 @@
 # SwordTarget-OFFER
 ## 剑指OFFER的题目
 ### 按难度顺序查看：[简单](#简单)、[中等](#中等)、[较难](#较难)<br>
-### 按分类查看：[数组](#数组)、[树](#树)、[字符串](#字符串)、[数学](#数学)、[链表](#链表)<br>
+### 按分类查看：[数组](#数组)、[树](#树)、[字符串](#字符串)、[数学](#数学)、[链表](#链表)、[贪心](#贪心)<br>
 
 ### 简单：<br>
 1.[二叉树的深度](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6.py)<br>
@@ -23,6 +23,8 @@
 ### 中等：<br>
 1.[重建二叉树](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91.py)<br>
 直接思路:先序-》第一个是根节点-》中序中寻找到这个根节点，然后将左右切分，左边的结点个数就是根节点左子树的结点个数。去先序接着根找依次这个个数的片段，找到后，又第一个是根节点，以此类推。运行时间66ms，占用内存5984K<br>
+2.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
+思路：设长度为n的绳子剪成起码两段以上的绳子的乘积最大值为f(n)，则易知f(n)=max{1\*f(n-1),2\*f(n-2),...,(n-1)\*f(1)}。而且f(n)起码会切分成两段，而长度为4以下的绳子再切都不可能比原来大，所以长度4以下的绳子需要分类讨论。大于5长度的绳子f(1)=1,f(2)=2,f(3)=3,f(4)=4。
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -70,3 +72,7 @@
 ### 链表：<br>
 1.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:和链表逆置挺像的，头插法插入列表里。如果没有insert方法的话。用堆栈放进去再弹出来。运行时间30 ms，占用内存5728K<br>
+
+### 贪心：<br>
+1.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
+思路：设长度为n的绳子剪成起码两段以上的绳子的乘积最大值为f(n)，则易知f(n)=max{1\*f(n-1),2\*f(n-2),...,(n-1)\*f(1)}。而且f(n)起码会切分成两段，而长度为4以下的绳子再切都不可能比原来大，所以长度4以下的绳子需要分类讨论。而大于5长度的绳子f(1)=1,f(2)=2,f(3)=3,f(4)=4。
