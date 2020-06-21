@@ -24,7 +24,7 @@
 1.[重建二叉树](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91.py)<br>
 直接思路:先序-》第一个是根节点-》中序中寻找到这个根节点，然后将左右切分，左边的结点个数就是根节点左子树的结点个数。去先序接着根找依次这个个数的片段，找到后，又第一个是根节点，以此类推。运行时间66ms，占用内存5984K<br>
 2.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
-思路：设长度为n的绳子剪成起码两段以上的绳子的乘积最大值为f(n)，则易知f(n)=max{1\*f(n-1),2\*f(n-2),...,(n-1)\*f(1)}。而且f(n)起码会切分成两段，而长度为4以下的绳子再切都不可能比原来大，所以长度4以下的绳子需要分类讨论。大于5长度的绳子f(1)=1,f(2)=2,f(3)=3,f(4)=4。
+思路：设长度为n的绳子剪成起码两段以上的绳子的乘积最大值为f(n)，则易知f(n)=max{1\*f(n-1),2\*f(n-2),...,(n-1)\*f(1)}。而且f(n)起码会切分成两段，而长度为4以下的绳子再切都不可能比原来大，所以长度4以下的绳子需要分类讨论。而大于5长度的绳子f(1)=1,f(2)=2,f(3)=3,f(4)=4。
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
