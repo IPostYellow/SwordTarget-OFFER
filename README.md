@@ -33,7 +33,8 @@
 间接思路:将直接思路中的计数器用while循环代替优化。然后发现这其实是Bfs的变例。运行时间22ms，占用内存5728k<br>
 5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:首先将所给结点不断找父节点，直到找到根节点，然后对根节点使用递归中序遍历，然后将中序遍历的结果保存，然后返回定结点的下一个结点就好了。运行时间22ms,占用内存5860k<br>
-6.[链表中环的入口结点]()
+6.[链表中环的入口结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9.py)<br>
+直接思路:首先把遍历的结点保存在列表中（最好是哈希表其实，这样更快，但是我没有用哈希表）。然后判断新遍历的结点是否存在于列表中，若存在，则直接返回当前结点。否则当所有结点遍历完毕后返回None。运行时间29ms,占用内存5860k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -86,6 +87,8 @@
 ### 链表：<br>
 1.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:和链表逆置挺像的，头插法插入列表里。如果没有insert方法的话。用堆栈放进去再弹出来。运行时间30 ms，占用内存5728K<br>
+2.[链表中环的入口结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9.py)<br>
+直接思路:首先把遍历的结点保存在列表中（最好是哈希表其实，这样更快，但是我没有用哈希表）。然后判断新遍历的结点是否存在于列表中，若存在，则直接返回当前结点。否则当所有结点遍历完毕后返回None。运行时间29ms,占用内存5860k<br>
 
 ### 贪心：<br>
 1.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
