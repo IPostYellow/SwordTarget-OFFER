@@ -31,6 +31,8 @@
 4.[把二叉树打印成多行](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C.py)<br>
 直接思路:用队列和计数器解决，当计数器为0时，说明要开始新的一层了，将计数器置为当前队列长度，每出队一个元素，计数器减一。然后若出队结点的左右子树存在，则将其入队。不断循环这个过程，直到队列为空结束。运行时间30ms,占用内存5832k<br>
 间接思路:将直接思路中的计数器用while循环代替优化。然后发现这其实是Bfs的变例。运行时间22ms，占用内存5728k<br>
+5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+直接思路:首先将所给结点不断找父节点，直到找到根节点，然后对根节点使用递归中序遍历，然后将中序遍历的结果保存，然后返回定结点的下一个结点就好了。
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -63,6 +65,8 @@
 4.[把二叉树打印成多行](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C.py)<br>
 直接思路:用队列和计数器解决，当计数器为0时，说明要开始新的一层了，将计数器置为当前队列长度，每出队一个元素，计数器减一。然后若出队结点的左右子树存在，则将其入队。不断循环这个过程，直到队列为空结束。运行时间30ms,占用内存5832k<br>
 间接思路:将直接思路中的计数器用while循环代替优化。然后发现这其实是Bfs的变例。运行时间22ms，占用内存5728k<br>
+5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+直接思路:首先将所给结点不断找父节点，直到找到根节点，然后对根节点使用递归中序遍历，然后将中序遍历的结果保存，然后返回定结点的下一个结点就好了。
 
 ### 字符串：<br>
 1.[替换空格](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.py)<br>
