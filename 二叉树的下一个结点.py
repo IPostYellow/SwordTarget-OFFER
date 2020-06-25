@@ -10,7 +10,7 @@ class TreeLinkNode:
         self.next = None
 
 
-class Solution:
+class Solution:#运行时间22ms，占用内存5860k
     mid_list = []
 
     def midsearch(self, pNode):
