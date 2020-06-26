@@ -21,21 +21,23 @@
 间接思路:消去递归，使用堆栈，将根节点压入栈中，然后开始循环：若栈不空，出栈一个元素，并交换其左右节点，然后再将其左右节点入栈。否则结束。运行时间21ms，占用内存5736K。<br>
 
 ### 中等：<br>
-1.[重建二叉树](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91.py)<br>
+1.[重建二叉树](https://github.com/IPostYellow/SwordTarget-
+OFFER/blob/master/%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91.py)<br>
 直接思路:先序-》第一个是根节点-》中序中寻找到这个根节点，然后将左右切分，左边的结点个数就是根节点左子树的结点个数。去先序接着根找依次这个个数的片段，找到后，又第一个是根节点，以此类推。运行时间66ms，占用内存5984K<br>
-2.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
+2.[剪绳子](https://github.com/IPostYellow/SwordTarget-
+OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
 思路：设长度为n的绳子剪成起码两段以上的绳子的乘积最大值为f(n)，则易知f(n)=max{1\*f(n-1),2\*f(n-2),...,(n-1)\*f(1)}。而且f(n)起码会切分成两段，而长度为4以下的绳子再切都不可能比原来大，所以长度4以下的绳子需要分类讨论。而大于5长度的绳子f(1)=1,f(2)=2,f(3)=3,f(4)=4。运行时间33ms,占用内存6120K<br>
-3.[数据流中的中位数](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0.py)<br>
+3.[数据流中的中位数](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0.py)<br>
 直接思路:每输入一个就排序一次，那么奇数列表的中位数就是中间那个数，偶数列表的中位数就是中间两个数之和。运行时间20ms,占用内存5732K<br>
 参考思路:利用最大堆和最小堆来实现，将一个数据流的有序排列看作是两个堆的存储。如\[1,2,3,4,5,6\],那么左边1,2,3存储在最大堆中，右边4,5,6存储在最小堆中。那么很显然这个列表的中位数就是最大堆的堆顶元素和最小堆的堆顶元素之和除以2。而如\[1,2,3,4,5\]，那么左边1,2,3存储在最大堆中，右边4,5存储在最小堆中，此时中位数就是最大堆的堆顶元素。那么只要每次把插入的元素，流走于两个堆之间，找到相应的位置，然后再设法将两个堆的元素个数规范，那么中位数就可容易得出。运行时间28ms,占用内存5720K<br>
-4.[把二叉树打印成多行](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C.py)<br>
+4.[把二叉树打印成多行](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C.py)<br>
 直接思路:用队列和计数器解决，当计数器为0时，说明要开始新的一层了，将计数器置为当前队列长度，每出队一个元素，计数器减一。然后若出队结点的左右子树存在，则将其入队。不断循环这个过程，直到队列为空结束。运行时间30ms,占用内存5832k<br>
 间接思路:将直接思路中的计数器用while循环代替优化。然后发现这其实是Bfs的变例。运行时间22ms，占用内存5728k<br>
-5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:首先将所给结点不断找父节点，直到找到根节点，然后对根节点使用递归中序遍历，然后将中序遍历的结果保存，然后返回定结点的下一个结点就好了。运行时间22ms,占用内存5860k<br>
-6.[链表中环的入口结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9.py)<br>
+6.[链表中环的入口结点](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9.py)<br>
 直接思路:首先把遍历的结点保存在列表中（最好是哈希表其实，这样更快，但是我没有用哈希表）。然后判断新遍历的结点是否存在于列表中，若存在，则直接返回当前结点。否则当所有结点遍历完毕后返回None。运行时间29ms，占用内存5860k<br>
-7.[字符流中第一个不重复的字符](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6.py)<br>
+7.[字符流中第一个不重复的字符](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6.py)<br>
 直接思路:首先创建一个字典，用于记录字符出现的次数。再创建一个列表，用于记录插入的字符。若插入的字符在字典中不存在，则在字典中创建新的字符索引并记录值为1，否则对应索引的记录值加1。最后遍历列表，每个元素对应字典中索引中若有记录值为1的，则直接返回这个元素。若列表遍历完毕还没有返回，则返回#。运行时间21ms，占用内存5732k<br>
 
 ### 较难：<br>
@@ -66,10 +68,10 @@
 间接思路:消去递归，使用堆栈，将根节点压入栈中，然后开始循环：若栈不空，出栈一个元素，并交换其左右节点，然后再将其左右节点入栈。否则结束。运行时间21ms，占用内存5736K。<br>
 3.[重建二叉树](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91.py)<br>
 直接思路:先序-》第一个是根节点-》中序中寻找到这个根节点，然后将左右切分，左边的结点个数就是根节点左子树的结点个数。去先序接着根找依次这个个数的片段，找到后，又第一个是根节点，以此类推。运行时间66ms，占用内存5984K<br>
-4.[把二叉树打印成多行](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C.py)<br>
+4.[把二叉树打印成多行](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C.py)<br>
 直接思路:用队列和计数器解决，当计数器为0时，说明要开始新的一层了，将计数器置为当前队列长度，每出队一个元素，计数器减一。然后若出队结点的左右子树存在，则将其入队。不断循环这个过程，直到队列为空结束。运行时间30ms,占用内存5832k<br>
 间接思路:将直接思路中的计数器用while循环代替优化。然后发现这其实是Bfs的变例。运行时间22ms，占用内存5728k<br>
-5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+5.[二叉树的下一个结点](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:首先将所给结点不断找父节点，直到找到根节点，然后对根节点使用递归中序遍历，然后将中序遍历的结果保存，然后返回定结点的下一个结点就好了。
 
 ### 字符串：<br>
@@ -89,7 +91,7 @@
 ### 链表：<br>
 1.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:和链表逆置挺像的，头插法插入列表里。如果没有insert方法的话。用堆栈放进去再弹出来。运行时间30 ms，占用内存5728K<br>
-2.[链表中环的入口结点](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9.py)<br>
+2.[链表中环的入口结点](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9.py)<br>
 直接思路:首先把遍历的结点保存在列表中（最好是哈希表其实，这样更快，但是我没有用哈希表）。然后判断新遍历的结点是否存在于列表中，若存在，则直接返回当前结点。否则当所有结点遍历完毕后返回None。运行时间29ms,占用内存5860k<br>
 
 ### 贪心：<br>
@@ -97,10 +99,10 @@
 思路：设长度为n的绳子剪成起码两段以上的绳子的乘积最大值为f(n)，则易知f(n)=max{1\*f(n-1),2\*f(n-2),...,(n-1)\*f(1)}。而且f(n)起码会切分成两段，而长度为4以下的绳子再切都不可能比原来大，所以长度4以下的绳子需要分类讨论。而大于5长度的绳子f(1)=1,f(2)=2,f(3)=3,f(4)=4。运行时间33ms,占用内存6120K<br>
 
 ### 排序：<br>
-1.[数据流中的中位数](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0.py)<br>
+1.[数据流中的中位数](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0.py)<br>
 直接思路:每输入一个就排序一次，那么奇数列表的中位数就是中间那个数，偶数列表的中位数就是中间两个数之和。运行时间20ms,占用内存5732K<br>
 参考思路:利用最大堆和最小堆来实现，将一个数据流的有序排列看作是两个堆的存储。如\[1,2,3,4,5,6\],那么左边1,2,3存储在最大堆中，右边4,5,6存储在最小堆中。那么很显然这个列表的中位数就是最大堆的堆顶元素和最小堆的堆顶元素之和除以2。而如\[1,2,3,4,5\]，那么左边1,2,3存储在最大堆中，右边4,5存储在最小堆中，此时中位数就是最大堆的堆顶元素。那么只要每次把插入的元素，流走于两个堆之间，找到相应的位置，然后再设法将两个堆的元素个数规范，那么中位数就可容易得出。运行时间28ms,占用内存5720K<br>
 
 ### 哈希：<br>
-1.[字符流中第一个不重复的字符](https://github.com/IPostYellow/SwordTargetOFFER/blob/master/%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6.py)<br>
+1.[字符流中第一个不重复的字符](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6.py)<br>
 直接思路:首先创建一个字典，用于记录字符出现的次数。再创建一个列表，用于记录插入的字符。若插入的字符在字典中不存在，则在字典中创建新的字符索引并记录值为1，否则对应索引的记录值加1。最后遍历列表，每个元素对应字典中索引中若有记录值为1的，则直接返回这个元素。若列表遍历完毕还没有返回，则返回#。运行时间21ms，占用内存5732k<br>
