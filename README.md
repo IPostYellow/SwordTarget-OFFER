@@ -37,6 +37,8 @@
 直接思路:首先把遍历的结点保存在列表中（最好是哈希表其实，这样更快，但是我没有用哈希表）。然后判断新遍历的结点是否存在于列表中，若存在，则直接返回当前结点。否则当所有结点遍历完毕后返回None。运行时间29ms，占用内存5860k<br>
 7.[字符流中第一个不重复的字符](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6.py)<br>
 直接思路:首先创建一个字典，用于记录字符出现的次数。再创建一个列表，用于记录插入的字符。若插入的字符在字典中不存在，则在字典中创建新的字符索引并记录值为1，否则对应索引的记录值加1。最后遍历列表，每个元素对应字典中索引中若有记录值为1的，则直接返回这个元素。若列表遍历完毕还没有返回，则返回#。运行时间21ms，占用内存5732k<br>
+8.[表示数值的字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
+直接思路:没什么花里胡哨的，直接使用正则匹配，若正则匹配后的结果和原来的结果一样，则返回True，否则返回False。运行时间22ms,占用内存5720k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -77,6 +79,8 @@
 直接思路:将字符串以" "为分割点分割。然后再用"20%"组合起来。运行时间32 ms，占用内存5724K<br>
 参考思路:直接使用replace方法将" "替换成"20%"。运行时间23 ms，占用内存5752K<br>
 不使用函数自己写的思路:遍历一遍字符串，同时生成一个新的字符串，遍历到空格的时候生成字符串的时候生成"%20"。运行时间24ms，占用内存5860K<br>
+2.[表示数值的字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
+直接思路:没什么花里胡哨的，直接使用正则匹配，若正则匹配后的结果和原来的结果一样，则返回True，否则返回False。运行时间22ms,占用内存5720k<br>
 
 ### 数学：<br>
 1.[变态台阶跳](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
