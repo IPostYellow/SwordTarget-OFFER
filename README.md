@@ -49,6 +49,9 @@
 12.[扑克牌顺子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90.py)<br>
 直接思路:首先对列表进行排序，然后遍历到第一个不为0的数的下标i。将flag视为i。然后将下标为i的元素与下标i以后的元素逐个比对，如果有相同元素，直接返回false，如果下标为i的元素与后面的元素的差的绝对值大于等于0以外的数个数，那么flag的值减去超出的部分并重新赋值给flag。如果遍历结束后。flag等于0，则返回True，否则返回False。运行时间23ms,占用内存5752k<br>
 改进思路:其实不用这么复杂，无论有多少个0，都必须满足最小的那个非0值减去最大的值的绝对值要小于5就可以了。所以只需要排序后，判断最大的值减最小的值的差是否小于5，若小于5则返回True，否则返回False。运行时间21ms，占用内存5624k<br>
+13.[左旋字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%B7%A6%E6%97%8B%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
+直接思路:使用队列，将字符串的字符存入队列中，然后循环n次，出队入队。运行时间32ms,占用内存5752k<br>
+间接思路:直接使用字符串切片操作，将字符串切成\[0:n\]的部分和\[n:end\]的部分。然后组合的时候颠倒一下次序。运行时间22ms,占用内存5736k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -96,6 +99,9 @@
 不使用函数自己写的思路:遍历一遍字符串，同时生成一个新的字符串，遍历到空格的时候生成字符串的时候生成"%20"。运行时间24ms，占用内存5860K<br>
 2.[表示数值的字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
 直接思路:没什么花里胡哨的，直接使用正则匹配，若正则匹配后的结果和原来的结果一样，则返回True，否则返回False。运行时间22ms,占用内存5720k<br>
+3.[左旋字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%B7%A6%E6%97%8B%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
+直接思路:使用队列，将字符串的字符存入队列中，然后循环n次，出队入队。运行时间32ms,占用内存5752k<br>
+间接思路:直接使用字符串切片操作，将字符串切成\[0:n\]的部分和\[n:end\]的部分。然后组合的时候颠倒一下次序。运行时间22ms,占用内存5736k<br>
 
 ### 数学：<br>
 1.[变态台阶跳](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
