@@ -52,6 +52,9 @@
 13.[左旋字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%B7%A6%E6%97%8B%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
 直接思路:使用队列，将字符串的字符存入队列中，然后循环n次，出队入队。运行时间32ms,占用内存5752k<br>
 间接思路:直接使用字符串切片操作，将字符串切成\[0:n\]的部分和\[n:end\]的部分。然后组合的时候颠倒一下次序。运行时间22ms,占用内存5736k<br>
+14.[和为S的两个数字](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97.py)<br>
+直接思路:从头开始遍历，遇到和大于给定目标值的则直接break，否则如果和等于目标值，则返回这两个值。因为是从头开始遍历的，所以肯定是乘积最小的那组和。运行时间27ms,占用内存5752k<br>
+间接思路:哈希法，由于若A+B=SUM，则B=SUM-A，所以先把列表中的值存入字典，然后通过遍历列表，判断SUM-遍历的值是否在字典中，如果在，则判断其乘积是否小而暂存这两个数。最后返回的两个数肯定是最小的。运行时间22ms,占用内存5948k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -132,6 +135,9 @@
 ### 哈希：<br>
 1.[字符流中第一个不重复的字符](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6.py)<br>
 直接思路:首先创建一个字典，用于记录字符出现的次数。再创建一个列表，用于记录插入的字符。若插入的字符在字典中不存在，则在字典中创建新的字符索引并记录值为1，否则对应索引的记录值加1。最后遍历列表，每个元素对应字典中索引中若有记录值为1的，则直接返回这个元素。若列表遍历完毕还没有返回，则返回#。运行时间21ms，占用内存5732k<br>
+2.[和为S的两个数字](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97.py)<br>
+直接思路:从头开始遍历，遇到和大于给定目标值的则直接break，否则如果和等于目标值，则返回这两个值。因为是从头开始遍历的，所以肯定是乘积最小的那组和。运行时间27ms,占用内存5752k<br>
+间接思路:哈希法，由于若A+B=SUM，则B=SUM-A，所以先把列表中的值存入字典，然后通过遍历列表，判断SUM-遍历的值是否在字典中，如果在，则判断其乘积是否小而暂存这两个数。最后返回的两个数肯定是最小的。运行时间22ms,占用内存5948k<br>
 
 ### 位运算符：<br>
 1.[求1+2+...+n](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%B1%821%2B2...%2Bn.py)<br>
