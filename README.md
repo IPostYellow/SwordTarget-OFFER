@@ -58,7 +58,7 @@
 15.[和为S的连续正数序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97.py)<br>
 直接思路:用i遍历tsum以内的数字，再嵌套用j遍历i以后到tsum的数字，直到i到j的和大于tsum为止。把i到j的和求出来，同时记录下i到j的数字，如果等于tsum，则这组数字即为一个答案。跳出j遍历的循环。运行时间23ms,占用内存5752k<br>
 间接思路:数学法。<br>
-由于连续数字的和可以用公式来计算，设首项为x，末项为y，则其和为(x+y)\*(y-x+1)\/2。即y^2+y-x^2+x-2tsum=0。则可以计算出y=(-1+sqrt(1-4*(-x^2+x-2\*tsum)))/2。若y为整数，则说明x到y则为答案。所以将x从1到tsum进行遍历，计算y的值，若y为整数，则即为一个答案。运行时间22ms,占用内存5624k<br>
+由于连续数字的和可以用公式来计算，设首项为x，末项为y，则其和为(x+y)\*(y-x+1)\/2。即y^2+y-x^2+x-2\*tsum=0。则可以计算出y=(-1+sqrt(1-4*(-x^2+x-2\*tsum)))/2。若y为整数，则说明x到y则为答案。所以将x从1到tsum进行遍历，计算y的值，若y为整数，则即为一个答案。运行时间22ms,占用内存5624k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -123,7 +123,7 @@
 4.[和为S的连续正数序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97.py)<br>
 直接思路:用i遍历tsum以内的数字，再嵌套用j遍历i以后到tsum的数字，直到i到j的和大于tsum为止。把i到j的和求出来，同时记录下i到j的数字，如果等于tsum，则这组数字即为一个答案。跳出j遍历的循环。运行时间23ms,占用内存5752k<br>
 间接思路:数学法。<br>
-由于连续数字的和可以用公式来计算，设首项为x，末项为y，则其和为(x+y)\*(y-x+1)\/2。即y^2+y-x^2+x-2tsum=0。则可以计算出y=(-1+sqrt(1-4*(-x^2+x-2\*tsum)))/2。若y为整数，则说明x到y则为答案。所以将x从1到tsum进行遍历，计算y的值，若y为整数，则即为一个答案。运行时间22ms,占用内存5624k<br>
+由于连续数字的和可以用公式来计算，设首项为x，末项为y，则其和为(x+y)\*(y-x+1)\/2。即y^2+y-x^2+x-2\*tsum=0。则可以计算出y=(-1+sqrt(1-4*(-x^2+x-2\*tsum)))/2。若y为整数，则说明x到y则为答案。所以将x从1到tsum进行遍历，计算y的值，若y为整数，则即为一个答案。运行时间22ms,占用内存5624k<br>
 
 ### 链表：<br>
 1.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
