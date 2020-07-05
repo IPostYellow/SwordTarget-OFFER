@@ -55,6 +55,10 @@
 14.[和为S的两个数字](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97.py)<br>
 直接思路:从头开始遍历，遇到和大于给定目标值的则直接break，否则如果和等于目标值，则返回这两个值。因为是从头开始遍历的，所以肯定是乘积最小的那组和。运行时间27ms,占用内存5752k<br>
 间接思路:哈希法，由于若A+B=SUM，则B=SUM-A，所以先把列表中的值存入字典，然后通过遍历列表，判断SUM-遍历的值是否在字典中，如果在，则判断其乘积是否小而暂存这两个数。最后返回的两个数肯定是最小的。运行时间22ms,占用内存5948k<br>
+15.[和为S的连续正数序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97.py)<br>
+直接思路:用i遍历tsum以内的数字，再嵌套用j遍历i以后到tsum的数字，直到i到j的和大于tsum为止。把i到j的和求出来，同时记录下i到j的数字，如果等于tsum，则这组数字即为一个答案。跳出j遍历的循环。运行时间23ms,占用内存5752k<br>
+间接思路:数学法。<br>
+由于连续数字的和可以用公式来计算，设首项为x，末项为y，则其和为(x+y)\*(y-x+1)\/2。即y^2+y-x^2+x-2tsum=0。则可以计算出y=(-1+sqrt(1-4*(-x^2+x-2\*tsum)))/2。若y为整数，则说明x到y则为答案。所以将x从1到tsum进行遍历，计算y的值，若y为整数，则即为一个答案。运行时间22ms,占用内存5624k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -116,6 +120,10 @@
 3.[扑克牌顺子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90.py)<br>
 直接思路:首先对列表进行排序，然后遍历到第一个不为0的数的下标i。将flag视为i。然后将下标为i的元素与下标i以后的元素逐个比对，如果有相同元素，直接返回false，如果下标为i的元素与后面的元素的差的绝对值大于等于0以外的数个数，那么flag的值减去超出的部分并重新赋值给flag。如果遍历结束后。flag等于0，则返回True，否则返回False。运行时间23ms,占用内存5752k<br>
 改进思路:其实不用这么复杂，无论有多少个0，都必须满足最小的那个非0值减去最大的值的绝对值要小于5就可以了。所以只需要排序后，判断最大的值减最小的值的差是否小于5，若小于5则返回True，否则返回False。运行时间21ms，占用内存5624k<br>
+4.[和为S的连续正数序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%92%8C%E4%B8%BAS%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97.py)<br>
+直接思路:用i遍历tsum以内的数字，再嵌套用j遍历i以后到tsum的数字，直到i到j的和大于tsum为止。把i到j的和求出来，同时记录下i到j的数字，如果等于tsum，则这组数字即为一个答案。跳出j遍历的循环。运行时间23ms,占用内存5752k<br>
+间接思路:数学法。<br>
+由于连续数字的和可以用公式来计算，设首项为x，末项为y，则其和为(x+y)\*(y-x+1)\/2。即y^2+y-x^2+x-2tsum=0。则可以计算出y=(-1+sqrt(1-4*(-x^2+x-2\*tsum)))/2。若y为整数，则说明x到y则为答案。所以将x从1到tsum进行遍历，计算y的值，若y为整数，则即为一个答案。运行时间22ms,占用内存5624k<br>
 
 ### 链表：<br>
 1.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
