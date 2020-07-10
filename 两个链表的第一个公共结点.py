@@ -1,3 +1,6 @@
+'''
+输入两个链表，找出它们的第一个公共结点。
+'''
 # -*- coding:utf-8 -*-
 class ListNode:
     def __init__(self, x):
