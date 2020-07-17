@@ -88,6 +88,8 @@
 25.[合并两个排序的链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:用两个指针指向两个链表的头，然后新创一个链表，判断指针指向的链表的值哪个小，把小的连到新的链表中去，然后对应的那个指针指向下一个元素，直到有某个链表的指针指向了空为止，然后将另一个链表指针后的所有元素再连在新的链表后面。运行时间19ms，占用内存5624k<br>
 间接思路:使用递归的方法来实现上述的思路，可以直接用两个链表不停递归连接。但是效率没有直接思路的高。运行时间22ms，占用内存5688k<br>
+26.[反转链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.py)<br>
+直接思路:头插法，从头到尾遍历单链表，新建一个新的单链表节点，不断将遍历到的节点按头插的形式插入新的链表中，即可完成链表的反转。运行时间19ms,占用内存5624k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -179,6 +181,8 @@
 4.[合并两个排序的链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:用两个指针指向两个链表的头，然后新创一个链表，判断指针指向的链表的值哪个小，把小的连到新的链表中去，然后对应的那个指针指向下一个元素，直到有某个链表的指针指向了空为止，然后将另一个链表指针后的所有元素再连在新的链表后面。运行时间19ms，占用内存5624k<br>
 间接思路:使用递归的方法来实现上述的思路，可以直接用两个链表不停递归连接。但是效率没有直接思路的高。运行时间22ms，占用内存5688k<br>
+5.[反转链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.py)<br>
+直接思路:头插法，从头到尾遍历单链表，新建一个新的单链表节点，不断将遍历到的节点按头插的形式插入新的链表中，即可完成链表的反转。运行时间19ms,占用内存5624k<br>
 
 ### 贪心：<br>
 1.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
