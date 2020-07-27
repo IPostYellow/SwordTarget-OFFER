@@ -90,6 +90,9 @@
 间接思路:使用递归的方法来实现上述的思路，可以直接用两个链表不停递归连接。但是效率没有直接思路的高。运行时间22ms，占用内存5688k<br>
 26.[反转链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:头插法，从头到尾遍历单链表，新建一个新的单链表节点，不断将遍历到的节点按头插的形式插入新的链表中，即可完成链表的反转。运行时间19ms,占用内存5624k<br>
+27.[数值的整数次方](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9.py)<br>
+直接思路：调用pow函数。省时省力。运行时间20ms，占用内存5692k<br>
+间接思路：分成幂指数大于0，小于0和等于0的情况，大于0时则直接使用for循环乘幂指数次，小于0时则把数值取倒数，然后再for循环乘幂指数次，等于0则直接返回1。运行时间22ms,占用内存5720k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -169,6 +172,9 @@
 5.[整数中1的出现次数\(从1到n整数出现的次数\)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%95%B4%E6%95%B0%E4%B8%AD1%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0(%E4%BB%8E1%E5%88%B0n%E6%95%B4%E6%95%B0%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0).py)<br>
 直接思路:想总结出数学规律，但是失败了。<br>
 间接思路:暴力循环。初始化计数器为0，从1到n开始遍历，每个数通过循环取余的方法判断个、十、百。。。位是否为1，然后每有一个位为1，计数器就加1。最后计数器的值就是答案。运行时间37ms,占用内存5740k<br>
+6.[数值的整数次方](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9.py)<br>
+直接思路：调用pow函数。省时省力。运行时间20ms，占用内存5692k<br>
+间接思路：分成幂指数大于0，小于0和等于0的情况，大于0时则直接使用for循环乘幂指数次，小于0时则把数值取倒数，然后再for循环乘幂指数次，等于0则直接返回1。运行时间22ms,占用内存5720k<br>
 
 ### 链表：<br>
 1.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
