@@ -96,6 +96,8 @@
 28.[二进制中1的个数](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0.py)<br>
 直接思路:正数好办，直接辗转相除法，然后判断每次余数是否等于1，等于1就计数。对于负数，由于剑指上使用的是32位的数，但是python是无限位数的。所以首先把负数变成正数，然后开始辗转相除法，并且每次取余数的时候，要取反码。使用两个标记flag和bin_count记录当前情况，flag=1表示已经解决完补码+1的问题了，剩下的直接判断反码是1还是0就可以了，flag=2表示补码+1的进位还在，此时遇到余数为1要继续进位，直到余数为0或者超32位为止。bin_count用于记录当前是多少位了，少于32位循环将继续下去，并且每次都是余数视为1。运行时间19ms，占用内存5748k<br>
 间接思路:发现有val :1101000, val-1: 1100111 那么val & （val-1） : 1100000的规律，那么每次遇到一个1，都可以通过val&val-1的方式去消除那个1。所以只需要在给定的数n不为0且n>=-2147483648(32位的最小值)的时候，不断循环计数+1，n=n&(n-1)。运行时间18ms,占用内存5748k<br>
+29.[矩形覆盖](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96.py)<br>
+直接思路：通过人工计算前4个矩形的覆盖方法数可得，假设用n个2\*1的矩形覆盖一个2\*n的矩形的方法数为f\[n\]，则f\[n\]=f\[n-1\]+f\[n-2\]。那么根据递推的规则，很容易想到动态规划法，使用动态规划法进行递推计算，得到f\[n\]。运行时间26ms,占用内存5684k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -228,6 +230,8 @@
 1.[连续子数组的最大和](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C.py)<br>
 直接思路:遍历数组所有数，每一个再嵌套循环遍历他后面的数的和，并将所有的和存入列表中，最后返回列表中的最大值。运行时间18ms,占用内存5740k<br>
 间接思路:动态规划法。设结尾是第i个元素的最长连续子数组最大值为dp\[i\]，则dp\[i\]=max{dp\[i-1\]+array\[i-1\],array\[i-1\]}，因为在数组array中第i个元素是array\[i-1\]。所以从dp\[0\]=0开始遍历到最后。并且最好每次都判断出dp几最大，然后返回最大值。运行时间18ms,占用内存5748k<br>
+2.[矩形覆盖](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96.py)<br>
+直接思路：通过人工计算前4个矩形的覆盖方法数可得，假设用n个2\*1的矩形覆盖一个2\*n的矩形的方法数为f\[n\]，则f\[n\]=f\[n-1\]+f\[n-2\]。那么根据递推的规则，很容易想到动态规划法，使用动态规划法进行递推计算，得到f\[n\]。运行时间26ms,占用内存5684k<br>
 
 ### 场景模拟法：<br>
 1.[栈的压入、弹出序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97.py)<br>
