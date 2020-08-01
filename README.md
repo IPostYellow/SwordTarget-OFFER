@@ -98,6 +98,8 @@
 间接思路:发现有val :1101000, val-1: 1100111 那么val & （val-1） : 1100000的规律，那么每次遇到一个1，都可以通过val&val-1的方式去消除那个1。所以只需要在给定的数n不为0且n>=-2147483648(32位的最小值)的时候，不断循环计数+1，n=n&(n-1)。运行时间18ms,占用内存5748k<br>
 29.[矩形覆盖](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96.py)<br>
 直接思路：通过人工计算前4个矩形的覆盖方法数可得，假设用n个2\*1的矩形覆盖一个2\*n的矩形的方法数为f\[n\]，则f\[n\]=f\[n-1\]+f\[n-2\]。那么根据递推的规则，很容易想到动态规划法，使用动态规划法进行递推计算，得到f\[n\]。运行时间26ms,占用内存5684k<br>
+30.[跳台阶](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
+直接思路：很容易就能想到，台阶为n的情况下，可以是台阶n-1的基础上跳1台阶跳上来，也可以是台阶n-2的基础上跳2台阶跳上来，所以很显然假设跳n台阶的跳法为f\[n\]，且f\[n\]=f\[n-1\]+f\[n-2\]。可以利用动态规划法递推计算出来。运行时间18ms,占用内存5744k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -232,6 +234,8 @@
 间接思路:动态规划法。设结尾是第i个元素的最长连续子数组最大值为dp\[i\]，则dp\[i\]=max{dp\[i-1\]+array\[i-1\],array\[i-1\]}，因为在数组array中第i个元素是array\[i-1\]。所以从dp\[0\]=0开始遍历到最后。并且最好每次都判断出dp几最大，然后返回最大值。运行时间18ms,占用内存5748k<br>
 2.[矩形覆盖](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96.py)<br>
 直接思路：通过人工计算前4个矩形的覆盖方法数可得，假设用n个2\*1的矩形覆盖一个2\*n的矩形的方法数为f\[n\]，则f\[n\]=f\[n-1\]+f\[n-2\]。那么根据递推的规则，很容易想到动态规划法，使用动态规划法进行递推计算，得到f\[n\]。运行时间26ms,占用内存5684k<br>
+3.[跳台阶](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
+直接思路：很容易就能想到，台阶为n的情况下，可以是台阶n-1的基础上跳1台阶跳上来，也可以是台阶n-2的基础上跳2台阶跳上来，所以很显然假设跳n台阶的跳法为f\[n\]，且f\[n\]=f\[n-1\]+f\[n-2\]。可以利用动态规划法递推计算出来。运行时间18ms,占用内存5744k<br>
 
 ### 场景模拟法：<br>
 1.[栈的压入、弹出序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97.py)<br>
