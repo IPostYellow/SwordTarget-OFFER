@@ -100,6 +100,8 @@
 直接思路：通过人工计算前4个矩形的覆盖方法数可得，假设用n个2\*1的矩形覆盖一个2\*n的矩形的方法数为f\[n\]，则f\[n\]=f\[n-1\]+f\[n-2\]。那么根据递推的规则，很容易想到动态规划法，使用动态规划法进行递推计算，得到f\[n\]。运行时间26ms,占用内存5684k<br>
 30.[跳台阶](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
 直接思路：很容易就能想到，台阶为n的情况下，可以是台阶n-1的基础上跳1台阶跳上来，也可以是台阶n-2的基础上跳2台阶跳上来，所以很显然假设跳n台阶的跳法为f\[n\]，且f\[n\]=f\[n-1\]+f\[n-2\]。可以利用动态规划法递推计算出来。运行时间18ms,占用内存5744k<br>
+31.[斐波那契数列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.py)<br>
+直接思路：动态规划法的例子，本身斐波那契数列就是递推式，直接递推计算即可。运行时间16ms,占用内存5744k<br>
 
 ### 较难：<br>
 1.[二维数组查找](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.py)<br>
@@ -236,6 +238,8 @@
 直接思路：通过人工计算前4个矩形的覆盖方法数可得，假设用n个2\*1的矩形覆盖一个2\*n的矩形的方法数为f\[n\]，则f\[n\]=f\[n-1\]+f\[n-2\]。那么根据递推的规则，很容易想到动态规划法，使用动态规划法进行递推计算，得到f\[n\]。运行时间26ms,占用内存5684k<br>
 3.[跳台阶](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
 直接思路：很容易就能想到，台阶为n的情况下，可以是台阶n-1的基础上跳1台阶跳上来，也可以是台阶n-2的基础上跳2台阶跳上来，所以很显然假设跳n台阶的跳法为f\[n\]，且f\[n\]=f\[n-1\]+f\[n-2\]。可以利用动态规划法递推计算出来。运行时间18ms,占用内存5744k<br>
+4.[斐波那契数列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.py)<br>
+直接思路：动态规划法的例子，本身斐波那契数列就是递推式，直接递推计算即可。运行时间16ms,占用内存5744k<br>
 
 ### 场景模拟法：<br>
 1.[栈的压入、弹出序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97.py)<br>
