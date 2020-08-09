@@ -119,6 +119,8 @@
 4.[二叉搜索树的第k个结点.java、python双版本](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:使用中序遍历将二叉搜索树遍历完了以后得到的列表就是一个有序的列表，只需要取出第k个元素就为结果。运行时间34ms,占用内存5744k<br>
 间接思路:但是我们其实只需要第k的结点而已，直接思路的方法却存了一堆没用的结点。所以在使用中序遍历的时候，不将遍历结果存储下来，设置一个计数器，当计数器达到了k的时候，将那个元素返回。运行时间19ms,占用内存5624k<br>
+5.[链表中倒数第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+直接思路:设计一个大小为k的滑动窗口，将两个距离为k-1的指针p1,p2指向链表中的第1个结点和第k个结点，然后同时移动p1和p2，直到p2.next为空为止，则此时p1所指向的结点即为倒数第k个结点。运行时间26ms，占用内存6520k<br>
 
 ****
 ### 数组：<br>
@@ -208,6 +210,8 @@
 间接思路:使用递归的方法来实现上述的思路，可以直接用两个链表不停递归连接。但是效率没有直接思路的高。运行时间22ms，占用内存5688k<br>
 5.[反转链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:头插法，从头到尾遍历单链表，新建一个新的单链表节点，不断将遍历到的节点按头插的形式插入新的链表中，即可完成链表的反转。运行时间19ms,占用内存5624k<br>
+6.[链表中倒数第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+直接思路:设计一个大小为k的滑动窗口，将两个距离为k-1的指针p1,p2指向链表中的第1个结点和第k个结点，然后同时移动p1和p2，直到p2.next为空为止，则此时p1所指向的结点即为倒数第k个结点。运行时间26ms，占用内存6520k<br>
 
 ### 贪心：<br>
 1.[剪绳子](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%89%AA%E7%BB%B3%E5%AD%90.py)<br>
