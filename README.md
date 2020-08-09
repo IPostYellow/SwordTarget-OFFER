@@ -116,7 +116,7 @@
 不使用函数自己写的思路:遍历一遍字符串，同时生成一个新的字符串，遍历到空格的时候生成字符串的时候生成"%20"。运行时间24ms，占用内存5860K<br>
 3.[从尾到头打印链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:和链表逆置挺像的，头插法插入列表里。如果没有insert方法的话。用堆栈放进去再弹出来。运行时间30 ms，占用内存5728K<br>
-4.[二叉搜索树的第k个结点.java、python双版本](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+4.[二叉搜索树的第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:使用中序遍历将二叉搜索树遍历完了以后得到的列表就是一个有序的列表，只需要取出第k个元素就为结果。运行时间34ms,占用内存5744k<br>
 间接思路:但是我们其实只需要第k的结点而已，直接思路的方法却存了一堆没用的结点。所以在使用中序遍历的时候，不将遍历结果存储下来，设置一个计数器，当计数器达到了k的时候，将那个元素返回。运行时间19ms,占用内存5624k<br>
 5.[链表中倒数第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
@@ -161,7 +161,7 @@
 改进思路:遍历节点的时候可以使用后序遍历法，这样先判断子树满不满足二叉平衡树的条件，如果满足，则继续遍历，否则直接返回False，不需要再判断其根节点了。运行时间25ms,占用内存5636k<br>
 7.[二叉搜索树与双向链表](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.py)<br>
 直接思路:中序遍历整颗树，将结点存入列表中。然后整个列表是有序的，直接把列表遍历一遍从头到尾连起来就成了有序的双向链表。运行时间27ms，占用内存5752k<br>
-8.[二叉搜索树的第k个结点.java、python双版本](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
+8.[二叉搜索树的第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:使用中序遍历将二叉搜索树遍历完了以后得到的列表就是一个有序的列表，只需要取出第k个元素就为结果。运行时间34ms,占用内存5744k<br>
 间接思路:但是我们其实只需要第k的结点而已，直接思路的方法却存了一堆没用的结点。所以在使用中序遍历的时候，不将遍历结果存储下来，设置一个计数器，当计数器达到了k的时候，将那个元素返回。运行时间19ms,占用内存5624k<br>
 
