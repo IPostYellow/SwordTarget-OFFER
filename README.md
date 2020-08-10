@@ -121,6 +121,8 @@
 间接思路:但是我们其实只需要第k的结点而已，直接思路的方法却存了一堆没用的结点。所以在使用中序遍历的时候，不将遍历结果存储下来，设置一个计数器，当计数器达到了k的时候，将那个元素返回。运行时间19ms,占用内存5624k<br>
 5.[链表中倒数第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:设计一个大小为k的滑动窗口，将两个距离为k-1的指针p1,p2指向链表中的第1个结点和第k个结点，然后同时移动p1和p2，直到p2.next为空为止，则此时p1所指向的结点即为倒数第k个结点。运行时间26ms，占用内存6520k<br>
+6.[二叉树中和为某一值的路径(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84.py)<br>
+直接思路:利用递归实现回溯遍历，设置两个列表result和tmp来存放总的答案和遍历到的路径。遍历树的方法选用先序遍历，将遍历到的路径（结点的值）存入tmp列表中，如果一个递归结束，则将tmp的最后一个元素删除，如果判断出已经到达了叶子节点而且路径的值和刚好和所给值一致，则将该tmp列表深拷贝后（python和java只有引用，如果没有深拷贝的话，会导致后面改变tmp的值的时候，连result里的值也会改变）压入result列表中。最后返回result列表。运行时间20ms,占用内存5752k<br>
 
 ****
 ### 数组：<br>
@@ -164,6 +166,8 @@
 8.[二叉搜索树的第k个结点(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9.py)<br>
 直接思路:使用中序遍历将二叉搜索树遍历完了以后得到的列表就是一个有序的列表，只需要取出第k个元素就为结果。运行时间34ms,占用内存5744k<br>
 间接思路:但是我们其实只需要第k的结点而已，直接思路的方法却存了一堆没用的结点。所以在使用中序遍历的时候，不将遍历结果存储下来，设置一个计数器，当计数器达到了k的时候，将那个元素返回。运行时间19ms,占用内存5624k<br>
+9.[二叉树中和为某一值的路径(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84.py)<br>
+直接思路:利用递归实现回溯遍历，设置两个列表result和tmp来存放总的答案和遍历到的路径。遍历树的方法选用先序遍历，将遍历到的路径（结点的值）存入tmp列表中，如果一个递归结束，则将tmp的最后一个元素删除，如果判断出已经到达了叶子节点而且路径的值和刚好和所给值一致，则将该tmp列表深拷贝后（python和java只有引用，如果没有深拷贝的话，会导致后面改变tmp的值的时候，连result里的值也会改变）压入result列表中。最后返回result列表。运行时间20ms,占用内存5752k<br>
 
 ### 字符串：<br>
 1.[替换空格](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.py)<br>
