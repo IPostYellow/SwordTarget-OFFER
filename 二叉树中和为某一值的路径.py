@@ -1,6 +1,9 @@
 # -*- coding:utf-8 -*-
+'''
+输入一颗二叉树的根节点和一个整数，按字典序打印出二叉树中结点值的和为输入整数的所有路径。
+路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
+'''
 import copy
-
 
 class TreeNode:
     def __init__(self, x):
@@ -23,7 +26,7 @@ class Solution:  # 20ms,5752k
             self.preorder(root.left, sum - root.val)
         if root.right:
             self.preorder(root.right, sum - root.val)
-        self.tmp.pop(-1)
+        self.tmp.pop(-1) #开始回溯
 
     def FindPath(self, root, expectNumber):
         # write code here
