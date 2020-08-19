@@ -125,6 +125,9 @@
 直接思路:利用递归实现回溯遍历，设置两个列表result和tmp来存放总的答案和遍历到的路径。遍历树的方法选用先序遍历，将遍历到的路径（结点的值）存入tmp列表中，如果一个递归结束，则将tmp的最后一个元素删除，如果判断出已经到达了叶子节点而且路径的值和刚好和所给值一致，则将该tmp列表深拷贝后（python和java只有引用，如果没有深拷贝的话，会导致后面改变tmp的值的时候，连result里的值也会改变）压入result列表中。最后返回result列表。运行时间20ms,占用内存5752k<br>
 7.[二叉搜索树的后序遍历](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86.py)<br>
 直接思路:利用递归方法判断根节点左右子树是否为二叉搜索树，判断出当前根节点的左子树的范围后，接下来如果有值比根节点小，则说明这不是一颗二叉搜索树。否则就继续递归其子树是否为二叉搜索树。运行时间17ms,占用内存5744k<br>
+8.[树的子结构(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.py)
+直接思路:通过先序遍历找到第二颗树的根节点的值在第一棵树中的位置，然后写一个判断函数不断判断从这个根开始的子树的值是否相同。若有一个不同，则返回False。运行时间21ms,占用内存5712k<br>
+
 
 ****
 ### 数组：<br>
@@ -172,6 +175,8 @@
 直接思路:利用递归实现回溯遍历，设置两个列表result和tmp来存放总的答案和遍历到的路径。遍历树的方法选用先序遍历，将遍历到的路径（结点的值）存入tmp列表中，如果一个递归结束，则将tmp的最后一个元素删除，如果判断出已经到达了叶子节点而且路径的值和刚好和所给值一致，则将该tmp列表深拷贝后（python和java只有引用，如果没有深拷贝的话，会导致后面改变tmp的值的时候，连result里的值也会改变）压入result列表中。最后返回result列表。运行时间20ms,占用内存5752k<br>
 10.[二叉搜索树的后序遍历](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86.py)<br>
 直接思路:利用递归方法判断根节点左右子树是否为二叉搜索树，判断出当前根节点的左子树的范围后，接下来如果有值比根节点小，则说明这不是一颗二叉搜索树。否则就继续递归其子树是否为二叉搜索树。运行时间17ms,占用内存5744k<br>
+11.[树的子结构(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.py)
+直接思路:通过先序遍历找到第二颗树的根节点的值在第一棵树中的位置，然后写一个判断函数不断判断从这个根开始的子树的值是否相同。若有一个不同，则返回False。运行时间21ms,占用内存5712k<br>
 
 ### 字符串：<br>
 1.[替换空格](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.py)<br>
