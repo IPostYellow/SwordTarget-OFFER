@@ -125,9 +125,10 @@
 直接思路:利用递归实现回溯遍历，设置两个列表result和tmp来存放总的答案和遍历到的路径。遍历树的方法选用先序遍历，将遍历到的路径（结点的值）存入tmp列表中，如果一个递归结束，则将tmp的最后一个元素删除，如果判断出已经到达了叶子节点而且路径的值和刚好和所给值一致，则将该tmp列表深拷贝后（python和java只有引用，如果没有深拷贝的话，会导致后面改变tmp的值的时候，连result里的值也会改变）压入result列表中。最后返回result列表。运行时间20ms,占用内存5752k<br>
 7.[二叉搜索树的后序遍历](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86.py)<br>
 直接思路:利用递归方法判断根节点左右子树是否为二叉搜索树，判断出当前根节点的左子树的范围后，接下来如果有值比根节点小，则说明这不是一颗二叉搜索树。否则就继续递归其子树是否为二叉搜索树。运行时间17ms,占用内存5744k<br>
-8.[树的子结构(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.py)
+8.[树的子结构(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.py)<br>
 直接思路:通过先序遍历找到第二颗树的根节点的值在第一棵树中的位置，然后写一个判断函数不断判断从这个根开始的子树的值是否相同。若有一个不同，则返回False。运行时间21ms,占用内存5712k<br>
-
+9.[字符串的排列(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97.py)<br>
+直接思路:使用动态规划法。设f(n)为前n个字符的全排列，则f(n)=对f(n-1)的排列中插入第n个字符，对于长度为m的字符串，有m+1中插入方法。所以通过不断迭代插入，就可以得到f(n)。通过集合去重，然后排序即可得到答案。运行时间25ms,占用内存5752k<br>
 
 ****
 ### 数组：<br>
@@ -175,7 +176,7 @@
 直接思路:利用递归实现回溯遍历，设置两个列表result和tmp来存放总的答案和遍历到的路径。遍历树的方法选用先序遍历，将遍历到的路径（结点的值）存入tmp列表中，如果一个递归结束，则将tmp的最后一个元素删除，如果判断出已经到达了叶子节点而且路径的值和刚好和所给值一致，则将该tmp列表深拷贝后（python和java只有引用，如果没有深拷贝的话，会导致后面改变tmp的值的时候，连result里的值也会改变）压入result列表中。最后返回result列表。运行时间20ms,占用内存5752k<br>
 10.[二叉搜索树的后序遍历](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86.py)<br>
 直接思路:利用递归方法判断根节点左右子树是否为二叉搜索树，判断出当前根节点的左子树的范围后，接下来如果有值比根节点小，则说明这不是一颗二叉搜索树。否则就继续递归其子树是否为二叉搜索树。运行时间17ms,占用内存5744k<br>
-11.[树的子结构(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.py)
+11.[树的子结构(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.py)<br>
 直接思路:通过先序遍历找到第二颗树的根节点的值在第一棵树中的位置，然后写一个判断函数不断判断从这个根开始的子树的值是否相同。若有一个不同，则返回False。运行时间21ms,占用内存5712k<br>
 
 ### 字符串：<br>
@@ -188,6 +189,8 @@
 3.[左旋字符串](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%B7%A6%E6%97%8B%E5%AD%97%E7%AC%A6%E4%B8%B2.py)<br>
 直接思路:使用队列，将字符串的字符存入队列中，然后循环n次，出队入队。运行时间32ms,占用内存5752k<br>
 间接思路:直接使用字符串切片操作，将字符串切成\[0:n\]的部分和\[n:end\]的部分。然后组合的时候颠倒一下次序。运行时间22ms,占用内存5736k<br>
+4.[字符串的排列(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97.py)<br>
+直接思路:使用动态规划法。设f(n)为前n个字符的全排列，则f(n)=对f(n-1)的排列中插入第n个字符，对于长度为m的字符串，有m+1中插入方法。所以通过不断迭代插入，就可以得到f(n)。通过集合去重，然后排序即可得到答案。运行时间25ms,占用内存5752k<br>
 
 ### 数学：<br>
 1.[变态台阶跳](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6.py)<br>
@@ -270,6 +273,8 @@
 直接思路：很容易就能想到，台阶为n的情况下，可以是台阶n-1的基础上跳1台阶跳上来，也可以是台阶n-2的基础上跳2台阶跳上来，所以很显然假设跳n台阶的跳法为f\[n\]，且f\[n\]=f\[n-1\]+f\[n-2\]。可以利用动态规划法递推计算出来。运行时间18ms,占用内存5744k<br>
 4.[斐波那契数列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.py)<br>
 直接思路：动态规划法的例子，本身斐波那契数列就是递推式，直接递推计算即可。运行时间16ms,占用内存5744k<br>
+5.[字符串的排列(java、python双版本代码)](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97.py)<br>
+直接思路:使用动态规划法。设f(n)为前n个字符的全排列，则f(n)=对f(n-1)的排列中插入第n个字符，对于长度为m的字符串，有m+1中插入方法。所以通过不断迭代插入，就可以得到f(n)。通过集合去重，然后排序即可得到答案。运行时间25ms,占用内存5752k<br>
 
 ### 场景模拟法：<br>
 1.[栈的压入、弹出序列](https://github.com/IPostYellow/SwordTarget-OFFER/blob/master/%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97.py)<br>
